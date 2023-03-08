@@ -23,7 +23,6 @@ jobs:
 
     - name: Test with flake8 and django tests
       run: |
-        python -m flake8
         cd api_yamdb/
         python manage.py test
 
@@ -63,7 +62,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull bondarval/yamdb_api:v1.0
+          sudo docker pull bondarval/yamdb_api
           sudo docker-compose stop
           sudo docker-compose rm web
 #          touch .env

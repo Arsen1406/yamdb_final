@@ -1,5 +1,4 @@
 from django.urls import include, path
-from rest_framework import routers
 from .views import (
     CommentsViewSet,
     CategoriesViewSet,
@@ -10,6 +9,7 @@ from .views import (
     TokenViewSet,
     UsersViewSet
 )
+from rest_framework import routers
 
 
 router_v1 = routers.DefaultRouter()

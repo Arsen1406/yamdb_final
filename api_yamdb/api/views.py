@@ -10,11 +10,11 @@ from .serializers import (
     CategoriesSerializer,
     GenresSerializer,
     SignUpSerializer,
+    ReviewSerializer,
     TokenSerializer,
-    UserSerializer,
     TitlesSerializer,
     TitleCreateSerializer,
-    ReviewSerializer,
+    UserSerializer,
 )
 from django.contrib.auth.tokens import default_token_generator
 from django_filters.rest_framework import DjangoFilterBackend
@@ -28,7 +28,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework import filters, mixins, status, viewsets
 
-from reviews.models import Title, Review, Genre, Category
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
 from .filterset import TitleFilter

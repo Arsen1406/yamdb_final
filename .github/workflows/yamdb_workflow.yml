@@ -47,7 +47,7 @@ jobs:
         with:
           context: api_yamdb
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_api:v1.0
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_api
 
   deploy:
     name: Deploy to remote server

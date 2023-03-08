@@ -1,37 +1,39 @@
 from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.generics import get_object_or_404
-from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.pagination import LimitOffsetPagination
-from rest_framework import viewsets, mixins, filters, status
-from django_filters.rest_framework import DjangoFilterBackend
-from django.contrib.auth.tokens import default_token_generator
-from rest_framework.permissions import (
-    IsAuthenticatedOrReadOnly,
-    IsAuthenticated
-)
-from reviews.models import Title, Review, Genre, Category
-from users.models import User
 from .permissions import (
     AdminOrReadOnly,
     IsAdmin,
     IsSuperuser,
     ReviewPermission
 )
-from .filterset import TitleFilter
-from .send_confirmation_code import send_confirmation_code
-from .my_base_view_set import BaseMyViewSet
 from .serializers import (
-    SignUpSerializer, TokenSerializer,
+    CommentSerializer,
+    CategoriesSerializer,
+    GenresSerializer,
+    SignUpSerializer,
+    TokenSerializer,
     UserSerializer,
     TitlesSerializer,
     TitleCreateSerializer,
-    CommentSerializer,
     ReviewSerializer,
-    GenresSerializer,
-    CategoriesSerializer,
-
 )
+from django.contrib.auth.tokens import default_token_generator
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.generics import get_object_or_404
+from rest_framework.permissions import (
+    IsAuthenticatedOrReadOnly,
+    IsAuthenticated
+)
+from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.pagination import LimitOffsetPagination
+from rest_framework import filters, mixins, status, viewsets
+
+from reviews.models import Title, Review, Genre, Category
+from users.models import User
+
+from .filterset import TitleFilter
+from .send_confirmation_code import send_confirmation_code
+from .my_base_view_set import BaseMyViewSet
 
 
 class TitleViewSet(viewsets.ModelViewSet):

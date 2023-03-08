@@ -1,7 +1,7 @@
 # yamdb_final
 yamdb_final
 
-https://github.com/Arsen1406/yamdb_final/actions/workflows/yamdb_workflow.svg
+https://github.com/Arsen1406/yamdb_final/actions/workflows/yamdb_workflow/badge.svg
 
 Проект YaMDb собирает отзывы пользователей на произведения. 
 Сами произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или послушать музыку.

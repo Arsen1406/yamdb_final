@@ -2,7 +2,7 @@
 yamdb_final
 
 https://github.com/Arsen1406/yamdb_final/actions/workflows/yamdb_workflow/badge.svg
-Проект будет доступен по адресу http://158.160.0.122/redoc/
+Проект будет доступен по адресу http://158.160.17.205/redoc/
 
 
 Проект YaMDb собирает отзывы пользователей на произведения. 

@@ -157,8 +157,7 @@ class TokenViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
             user = User.objects.get(username=serializer.data['username'])
             token = str(RefreshToken.for_user(user).access_token)
             return Response(data={'token': token}, status=status.HTTP_200_OK)
-        else:
-            return Response(
-                data={'Ошибка': 'Код неправильный.'},
-                status=status.HTTP_400_BAD_REQUEST
-            )
+        return Response(
+            data={'Ошибка': 'Код неправильный.'},
+            status=status.HTTP_400_BAD_REQUEST
+        )

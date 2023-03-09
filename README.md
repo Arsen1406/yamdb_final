@@ -2,6 +2,8 @@
 yamdb_final
 
 https://github.com/Arsen1406/yamdb_final/actions/workflows/yamdb_workflow/badge.svg
+Проект будет доступен по адресу http://158.160.0.122/redoc/
+
 
 Проект YaMDb собирает отзывы пользователей на произведения. 
 Сами произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
@@ -43,7 +45,7 @@ https://github.com/Arsen1406/yamdb_final/actions/workflows/yamdb_workflow/badge.
 ```sh
 git clone <ssh ссылка>
 ```
-В дирректории проекта в выполните комманду, для запуска контейнера
+В дирректории проекта выполните комманду, для запуска контейнера
 ```sh
 sudo docker compose up --build -d
 ```
